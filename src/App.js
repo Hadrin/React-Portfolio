@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/header';
+import Portfolio from './pages/portfolio';
+import About from './pages/about';
+import Contact from './pages/contact';
 
 function App() {
+  document.body.style = 'background: lightblue;';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <div className="container" >
+            <Header />
+            <Routes>
+              <Route path="/" element={<About />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+        </div>
+      </Router>
   );
 }
 
