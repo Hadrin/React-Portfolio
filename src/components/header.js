@@ -76,9 +76,9 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Resume" style={styles.navText}>
+                <a href="https://docs.google.com/document/d/1GKGRhwkt7yPbCFe27VK8tGUjqkzjfYTXJIgPbomgJr4/edit?usp=sharing" className="nav-link" style={styles.navText}>
                   <h1>Resume</h1>
-                </Link>
+                </a>
               </li>
             </ul>
             <div></div>
